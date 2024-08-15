@@ -36,3 +36,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+st.html("<a href='https://github.com/inaciowagner'><b>Conheça meu perfil no GitHub - inaciowagner</b></a>")
