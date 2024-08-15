@@ -27,7 +27,7 @@ def main():
                     st.download_button(
                         label="Baixar PDF combinado",
                         data=f,
-                        file_name="merged_output.pdf",
+                        file_name="Criado_com_MesclarPDFs.pdf",
                         mime="application/pdf"
                     )
 
