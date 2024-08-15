@@ -2,6 +2,8 @@ import streamlit as st
 from PyPDF2 import PdfMerger
 import os
 
+st.set_page_config(layout="wide", page_icon="📑", page_title="MesclaPDFs")
+
 def merge_pdfs(pdf_list, output_path):
     merger = PdfMerger()
     for pdf in pdf_list:
@@ -10,7 +12,7 @@ def merge_pdfs(pdf_list, output_path):
     merger.close()
 
 def main():
-    st.title("Combinar PDFs")
+    st.title("Mesclar PDFs")
 
     uploaded_files = st.file_uploader("Selecione os arquivos PDF, ou arraste e solte aqui", type="pdf", accept_multiple_files=True)
 
