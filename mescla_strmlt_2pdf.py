@@ -17,15 +17,15 @@ def main():
     uploaded_files = st.file_uploader("Selecione os arquivos PDF, ou arraste e solte aqui", type="pdf", accept_multiple_files=True)
 
     if uploaded_files:
-        if st.button("Combinar PDFs"):
-            with st.spinner("Combinando PDFs..."):
+        if st.button("Mesclar PDFs"):
+            with st.spinner("Mesclando PDFs..."):
                 output_path = "merged_output.pdf"
                 merge_pdfs(uploaded_files, output_path)
-                st.success("PDFs combinados com sucesso!")
+                st.success("PDFs Mesclados com sucesso!")
 
                 with open(output_path, "rb") as f:
                     st.download_button(
-                        label="Baixar PDF combinado",
+                        label="Baixar PDF Mesclado",
                         data=f,
                         file_name="Criado_com_MesclarPDFs.pdf",
                         mime="application/pdf"
